@@ -19,7 +19,7 @@ int main()
 {
    char file[20];
   // int lines[100][2];
-   int i=0'j=0,k=0;
+   int i=0,j=0,k=0;
    double line=0;
    string lines[1000];
    string word;
