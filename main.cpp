@@ -26,7 +26,7 @@ int main()
    string concord[1000];
    int count[1000]={0};
    int idx=0;
-   cout<<"enter the text file name:"<<endl;e
+   cout<<"enter the text file name:"<<endl;
    cin.get(file,100);
    ifstream ifs;
    ifs.open("text.txt");
@@ -41,13 +41,15 @@ int main()
       getline(ifs,word);
       for(int i=0;1<word.length();i++)
       {
-         if(!isalpha(word.at(1)))
+         if(!isalpha(word.at(i)))
    {
       if(word.at(i)!='  ')
-         for(intj=i;j<word.length()-1;j++)
+         for(int j=i;j<word.length()-1;j++)
          {
             word.at(j)=word.at(j+1);
          }
+            if(i==word.length(0-1)
+               word.at(i(i)='  ';
          if(!islower(word.at(1)))
          {
             word.at(i)=tolower(word.at(i));
@@ -67,8 +69,9 @@ int main()
          }
       }
       if(flag!=true)
-      {concord[idx]=w;
-      count[idx]-1;
+      {
+      concord[idx]=w;
+      count[idx]=1;
       stringstream num;
       num<<line+1;
       lines[idx]=num.str();
@@ -76,16 +79,16 @@ int main()
       }
       else
       {
-      count[matchedAt]++;
+      count[matched]++;
       stringstream numb;
       numb<<line+1;
-      lines[matchedAt]-lines[matchedAt]+","+numb.str();
+      lines[matchedAt]=lines[matchedAt]+","+numb.str();
       }
       }
 
       line=line+1;
       }
-      cout<<std::left<<setw(15)<<"word"<<setw(3)<<"  :  "<<"count"<<setw(3)<<"  ;  "<<"Occurences"<<endl;
+      cout<<std::left<<setw(15)<<"Word"<<setw(3)<<"  :  "<<"count"<<setw(3)<<"  :  "<<"Occurences"<<endl;
    cout<<"--------------------------------------------------------------------------------"<<endl;
       for(int l=0;l<idx;l++)
          cout<<std::left<<setw(15)<<concord[l]<<setw(5)<<"  :  "<<count[l]<<setw(3)<<"  :  "<<lines[l]<<endl;
